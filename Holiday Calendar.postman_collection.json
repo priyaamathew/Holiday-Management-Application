@@ -1,0 +1,20 @@
+{
+	"info": {
+		"_postman_id": "b6520680-77ce-4466-9895-85143a262f8c",
+		"name": "Holiday Calendar",
+		"description": "Below is a list of API endpoints we currently support. Please note that requests to any of these endpoints count towards your API hits quota. If you are on the free plan it will count towards your allotments.\n\n`/holidays`This provides a list of holidays based on the parameters passed to it.\n\n| `country` | The country parameter must be in the iso-3166 format . |\n\n`year`The year you want to return the holidays. We currently support both historical and future years until 2049. The year must be specified as a number eg, `2019`",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39479561"
+	},
+	"item": [
+		{
+			"name": "View",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "The Calendarific API is built on REST principles. Authenticated users can interact with any of our URIs by using the specified HTTP request method. We enforce using SSL encryption by issuing requests through HTTPS."
+			},
+			"response": []
+		}
+	]
+}
