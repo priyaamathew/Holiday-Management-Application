@@ -20,10 +20,12 @@ def get_holidays(request):
 
     if cached_data:
         return Response(cached_data)
+    
 
     url = f"https://calendarific.com/api/v2/holidays?api_key={API_KEY}&country={country}&year={year}"
     response = requests.get(url)
     data = response.json()
+    print(data)
 
     if 'response' in data:
         holidays = []
