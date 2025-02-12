@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'holiday',
+    'holidays',
     "rest_framework"
 ]
 
@@ -123,3 +123,19 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+from dotenv import load_dotenv
+import os
+
+load_dotenv()  # Load environment variables from .env file
+
+CALENDARIFIC_API_KEY = os.getenv('CALENDARIFIC_API_KEY')
+
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+        'TIMEOUT': 86400  # Cache for 24 hours
+    }
+}
+
